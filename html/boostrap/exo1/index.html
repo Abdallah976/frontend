@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #premiere{
+            border: 1px solid red;
+            height: 400px;
+            
+        }
+        #deuxieme{
+            border: 1px solid green;
+
+        }
+        #troisieme{
+            border:1px solid royalblue;
+        
+         }
+    </style>
+    <title>Titre</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Accueil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Condition générale d'utilisation<span class="sr-only">(current)</span></a>
+      </nav>
+    <main class="container-fluid">
+        <div class="row justify-content-around mt-5">
+            <div class="col-lg-3 col-sm-1" id="premiere">
+              <img src="image/bleu.jpg.jpg" id="premier" class="d-none">
+            </div>
+            <div class="col-lg-3 col-sm-3" id="deuxieme">
+              <img src="image/blanc.jpg.jpg" id="deuxiem" class="d-none">
+            </div>
+            
+            <div class="col-lg-3 col-sm-4" id="troisieme">
+              <img src="image/rouge.jpg.jpg" id="troisiem" class="d-none">
+            </div>
+            
+          </div>
+          <div class="row">
+
+          </div><br><br>
+          
+          <input type="button" class="btn btn-primary btn-lg btn-block" value="Changer l'image" onclick="changeImage();">
+
+          
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+
+            compteur = 0;
+
+            function changeImage() {
+                premiere = document.getElementById("premier");
+                deuxieme = document.getElementById("deuxiem");
+                troisieme = document.getElementById("troisiem");
+
+                if (compteur == 0) {
+                    premiere.classList.add("d-block");
+                    compteur ++;
+                }
+                else if (compteur == 1) {
+                    premiere.classList.remove("d-block");
+                    deuxieme.classList.add("d-block");
+                    compteur ++;
+                }
+                else if (compteur == 2) {
+                    deuxieme.classList.remove("d-block");
+                    troisieme.classList.add("d-block");
+                    compteur ++;
+                }
+                else if (compteur == 3) {
+                    deuxieme.classList.remove("d-block");
+                    troisieme.classList.remove("d-block");
+                    compteur = 0;
+                }            
+            }
+
+        </script>
+    
+</body>
+</html>
