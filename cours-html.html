@@ -18,7 +18,10 @@
        <h5>Titre niveau 5</h5>
        <h6>Titre niveau 6</h6>
 
-       <p>un paragraphe en html 5</p>
+       <p>un paragraphe en html 5. j'ai utiliser une balise strong 
+           pour afficher ce <strong>mot</strong>et j'ai mis une emphase sur <em>celui-ci</em>
+        à ne pas confondre avec un mot en <i>Italique</i>
+    strong permet de dire que le mot et important </p>
        <a href="#">un lien hypertext</a>
        <ul>
            <li>un élément de liste non-ordonnée</li>
@@ -33,24 +36,39 @@
         <img src="#" alt="texte qui remplace l'imagedu cours"><br><br>
 
         <table>
-            <th>Titre du tableau</th>
-            <tr>
-                <td>
-                    une case du tableau
-                </td>
-                <td>
-                    une case du tableau
-                </td>
-                </tr>
-                <tr>
-                 <td>
-                    une case du tableau
-                </td>
-                <td>
-                    une case du tableau
-                </td>
-            </tr>
-           
-        </table>
+            <thead>
+                <colgroup>
+                    <col span="2" style="background-color:red">
+                    <col style="background-color:yellow">
+                  </colgroup>
+              <tr>
+                <th>Month</th>
+                <th>Savings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>January</th>
+                <th>$100</th>
+              </tr>
+              <tr>
+                <th>February</th>
+                <th>$80</th>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Sum</th>
+                <th>$180</th>
+              </tr>
+            </tfoot>
+          </table>
+          <h3>les balise dl, dt, dd</h3>
+          <dl>
+            <dt>Coffee</dt>
+            <dd>Black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>White cold drink</dd>
+          </dl>
     </body>
 </html>
